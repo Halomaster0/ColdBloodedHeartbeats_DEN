@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Using the 4-parameter version of send for maximum reliability in SDK v4
-            const result = await emailjs.send('service_jshwbap', 'template_2qp1iid', templateParams, 'tjFiVTG59iT5vLlQm');
+            const result = await emailjs.send('service_jshwbap', 'template_8yplknt', templateParams, 'tjFiVTG59iT5vLlQm');
             console.log('EmailJS SUCCESS!', result.status, result.text);
             return result;
         } catch (error) {
