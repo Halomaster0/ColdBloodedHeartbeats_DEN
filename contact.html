@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Inquiries | Cold Blooded Hearts: The Den</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/Fix.jpg" alt="Cold Blooded Hearts: The Den Logo">
+            </a>
+            <nav>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="https://halomaster0.github.io/ColdBloodedHeartbeats/"
+                            style="color: var(--color-gold); font-weight: bold;">Live Section</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <div class="cart-icon-wrapper" id="cart-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                    </svg>
+                    <span class="cart-count" id="cart-count-val">0</span>
+                </div>
+                <a href="shop.html" class="btn btn-secondary">Shop</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Side Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2 class="serif-text">Your Cart</h2>
+            <span class="close-modal" id="close-cart"
+                style="position: static; font-size: 2rem; cursor: pointer;">&times;</span>
+        </div>
+        <div class="cart-items-list" id="cart-items-list">
+            <p style="text-align: center; color: var(--color-text-muted); margin-top: 2rem;">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-info">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary" id="checkout-btn" style="width: 100%;">Checkout Now</button>
+        </div>
+    </div>
+
+    <!-- Professional Checkout Modal -->
+    <div class="modal" id="checkout-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-checkout">&times;</span>
+            <div class="checkout-grid">
+                <div class="checkout-main">
+                    <h2 class="serif-text" style="font-size: 2rem; margin-bottom: 2rem;">Checkout</h2>
+                    <h3
+                        style="font-size: 1rem; margin-bottom: 1rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 1px;">
+                        Payment Method</h3>
+                    <div class="payment-method-grid">
+                        <div class="payment-method-item active" data-method="etransfer">
+                            <div class="payment-dot"></div>
+                            <span>E-transfer</span>
+                        </div>
+                        <div class="payment-method-item" data-method="paypal">
+                            <div class="payment-dot"></div>
+                            <span>PayPal</span>
+                        </div>
+                        <div class="payment-method-item" data-method="card">
+                            <div class="payment-dot"></div>
+                            <span>Credit / Debit Card</span>
+                        </div>
+                    </div>
+                    <div id="payment-details-area">
+                        <div class="form-row" id="etransfer-details">
+                            <label>Confirm Email for Instructions</label>
+                            <input type="email" id="checkout-email" placeholder="email@example.com">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" id="complete-purchase-btn"
+                        style="width: 100%; margin-top: 1rem;">Complete Purchase</button>
+                    <p id="checkout-status" style="margin-top: 1rem; text-align: center;"></p>
+                </div>
+                <div class="checkout-sidebar">
+                    <h3 class="serif-text" style="margin-bottom: 1.5rem;">Order Summary</h3>
+                    <div id="checkout-summary-list"></div>
+                    <div class="checkout-total">
+                        <span>Total</span>
+                        <span id="checkout-grand-total">$0.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="contact-section section">
+            <div class="container" style="max-width: 600px;">
+                <h1 class="serif-text" style="font-size: 3rem; text-align: center; margin-bottom: var(--spacing-sm);">
+                    Inquire with The Den</h1>
+                <p style="text-align: center; color: var(--color-text-muted); margin-bottom: var(--spacing-lg);">
+                    Interested in a specific piece or a custom request? Send us a message below.
+                </p>
+
+                <form action="https://formspree.io/f/mjggezoe" method="POST" id="contact-form"
+                    style="background: var(--color-surface); padding: var(--spacing-md); border-radius: var(--border-radius); border: 1px solid rgba(255,255,255,0.1);">
+                    <div style="margin-bottom: var(--spacing-sm);">
+                        <label for="name"
+                            style="display: block; margin-bottom: 5px; color: var(--color-text-muted);">Name</label>
+                        <input type="text" id="name" name="name" required
+                            style="width: 100%; padding: 12px; background: #050505; border: 1px solid #333; color: white; border-radius: 4px;">
+                    </div>
+                    <div style="margin-bottom: var(--spacing-sm);">
+                        <label for="email"
+                            style="display: block; margin-bottom: 5px; color: var(--color-text-muted);">Email</label>
+                        <input type="email" id="email" name="email" required
+                            style="width: 100%; padding: 12px; background: #050505; border: 1px solid #333; color: white; border-radius: 4px;">
+                    </div>
+                    <div style="margin-bottom: var(--spacing-sm);">
+                        <label for="subject"
+                            style="display: block; margin-bottom: 5px; color: var(--color-text-muted);">Subject</label>
+                        <select id="subject" name="subject"
+                            style="width: 100%; padding: 12px; background: #050505; border: 1px solid #333; color: white; border-radius: 4px;">
+                            <option value="Merchandise Inquiry">Merchandise Inquiry</option>
+                            <option value="Home Decor Inquiry">Home Decor Inquiry</option>
+                            <option value="Custom Order">Custom Order</option>
+                            <option value="General Support">General Support</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: var(--spacing-md);">
+                        <label for="message"
+                            style="display: block; margin-bottom: 5px; color: var(--color-text-muted);">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            style="width: 100%; padding: 12px; background: #050505; border: 1px solid #333; color: white; border-radius: 4px; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+                    <div id="form-status" style="margin-top: var(--spacing-sm); text-align: center;"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="section" style="background: #050505; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container" style="text-align: center;">
+            <p style="color: var(--color-text-muted);">&copy; 2026 Cold Blooded Hearts: The Den. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
