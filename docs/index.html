@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Cold Blooded Hearts: The Den</title>
-    <link rel="stylesheet" href="Assets/css/main.css">
+    <title>Cold Blooded Hearts: The Den | Artisan Reptile Merchandise</title>
+    <meta name="description"
+        content="Explore The Den for exclusive, high-end reptile home decor and artisanal merchandise.">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src="Assets/Fix.jpg" alt="Cold Blooded Hearts: The Den Logo">
+                <img src="Fix.jpg" alt="Cold Blooded Hearts: The Den Logo">
             </a>
             <nav>
                 <div class="menu-toggle" id="mobile-menu">
@@ -51,6 +53,7 @@
                 style="position: static; font-size: 2rem; cursor: pointer;">&times;</span>
         </div>
         <div class="cart-items-list" id="cart-items-list">
+            <!-- Items will be injected here -->
             <p style="text-align: center; color: var(--color-text-muted); margin-top: 2rem;">Your cart is empty.</p>
         </div>
         <div class="cart-footer">
@@ -69,6 +72,7 @@
             <div class="checkout-grid">
                 <div class="checkout-main">
                     <h2 class="serif-text" style="font-size: 2rem; margin-bottom: 2rem;">Checkout</h2>
+
                     <h3
                         style="font-size: 1rem; margin-bottom: 1rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 1px;">
                         Payment Method</h3>
@@ -86,19 +90,24 @@
                             <span>Credit / Debit Card</span>
                         </div>
                     </div>
+
                     <div id="payment-details-area">
-                        <div class="form-row" id="etransfer-details">
+                        <!-- Dynamic details based on method -->
+                        <div class="form-row">
                             <label>Confirm Email for Instructions</label>
                             <input type="email" id="checkout-email" placeholder="email@example.com">
                         </div>
                     </div>
+
                     <button class="btn btn-primary" id="complete-purchase-btn"
                         style="width: 100%; margin-top: 1rem;">Complete Purchase</button>
                     <p id="checkout-status" style="margin-top: 1rem; text-align: center;"></p>
                 </div>
                 <div class="checkout-sidebar">
                     <h3 class="serif-text" style="margin-bottom: 1.5rem;">Order Summary</h3>
-                    <div id="checkout-summary-list"></div>
+                    <div id="checkout-summary-list">
+                        <!-- items injected here -->
+                    </div>
                     <div class="checkout-total">
                         <span>Total</span>
                         <span id="checkout-grand-total">$0.00</span>
@@ -109,19 +118,53 @@
     </div>
 
     <main>
-        <section class="about-hero section">
-            <div class="container" style="max-width: 800px; text-align: center;">
-                <h1 class="serif-text" style="font-size: 3.5rem; margin-bottom: var(--spacing-md);">The Story of <span
-                        style="color: var(--color-teal);">The Den</span></h1>
-                <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: var(--spacing-md);">
-                    Born from a passion for the exotic and a dedication to craft, The Den is the lifestyle extension of
-                    Cold Blooded Hearts. We believe that caring for reptiles is an art form, and the environment we
-                    create for them—and ourselves—should reflect that.
+        <section class="hero section fade-in">
+            <div class="container">
+                <h1 class="serif-text" style="font-size: 4rem; line-height: 1.1; margin-bottom: var(--spacing-sm);">The
+                    Sanctuary of <span style="color: var(--color-teal);">Artisanal</span> Decor.</h1>
+                <p
+                    style="font-size: 1.2rem; max-width: 600px; color: var(--color-text-muted); margin-bottom: var(--spacing-md);">
+                    Premium merchandise and home decor for the specialized reptile enthusiast. Welcome to The Den.
                 </p>
-                <p style="font-size: 1.1rem; color: var(--color-text-muted);">
-                    From artisanal home decor to premium apparel, every item in The Den is curated to resonate with the
-                    heartbeat of the modern keeper.
-                </p>
+                <div class="hero-btns">
+                    <a href="shop.html" class="btn btn-primary">Shop Collection</a>
+                    <a href="about.html" class="btn btn-secondary">Our Story</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-categories section">
+            <div class="container">
+                <h2 class="serif-text" style="text-align: center; margin-bottom: var(--spacing-lg);">Curated for The Den
+                </h2>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-md);">
+                    <div
+                        style="background: var(--texture-wood); padding: var(--spacing-md); border-radius: var(--border-radius); border: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                        <h3 class="serif-text" style="margin-bottom: var(--spacing-sm);">Home Decor</h3>
+                        <p style="color: var(--color-text-muted); margin-bottom: var(--spacing-sm);">Artisanal pieces to
+                            elevate your space.</p>
+                        <a href="shop.html?cat=decor" style="color: var(--color-teal); font-weight: 600;">Browse Decor
+                            &rarr;</a>
+                    </div>
+                    <div
+                        style="background: var(--texture-stone); padding: var(--spacing-md); border-radius: var(--border-radius); border: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                        <h3 class="serif-text" style="margin-bottom: var(--spacing-sm);">Merchandise</h3>
+                        <p style="color: var(--color-text-muted); margin-bottom: var(--spacing-sm);">Exclusive apparel
+                            and accessories.</p>
+                        <a href="shop.html?cat=merch" style="color: var(--color-teal); font-weight: 600;">View Apparel
+                            &rarr;</a>
+                    </div>
+                    <div
+                        style="background: linear-gradient(135deg, #051a1a 0%, #000 100%); padding: var(--spacing-md); border-radius: var(--border-radius); border: 1px solid var(--color-emerald); text-align: center; box-shadow: 0 0 15px var(--color-emerald-glow);">
+                        <h3 class="serif-text" style="margin-bottom: var(--spacing-sm); color: var(--color-gold);">Live
+                            Animals</h3>
+                        <p style="color: var(--color-text-muted); margin-bottom: var(--spacing-sm);">Artisan Visuals.
+                            Heartbeat Vitality.</p>
+                        <a href="https://halomaster0.github.io/ColdBloodedHeartbeats/"
+                            style="color: var(--color-gold); font-weight: 600;">Explore Livestock &rarr;</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -135,7 +178,7 @@
 
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="Assets/js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

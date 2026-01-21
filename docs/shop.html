@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Inquiries | Cold Blooded Hearts: The Den</title>
-    <link rel="stylesheet" href="Assets/css/main.css">
+    <title>Shop | Cold Blooded Hearts: The Den</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src="Assets/Fix.jpg" alt="Cold Blooded Hearts: The Den Logo">
+                <img src="Fix.jpg" alt="Cold Blooded Hearts: The Den Logo">
             </a>
             <nav>
                 <div class="menu-toggle" id="mobile-menu">
@@ -37,7 +37,7 @@
                     </svg>
                     <span class="cart-count" id="cart-count-val">0</span>
                 </div>
-                <a href="shop.html" class="btn btn-secondary">Shop</a>
+                <a href="contact.html" class="btn btn-secondary">Inquire</a>
             </div>
         </div>
     </header>
@@ -109,48 +109,59 @@
     </div>
 
     <main>
-        <section class="contact-section section">
-            <div class="container" style="max-width: 600px;">
-                <h1 class="serif-text" style="font-size: 3rem; text-align: center; margin-bottom: var(--spacing-sm);">
-                    Inquire with The Den</h1>
-                <p style="text-align: center; color: var(--color-text-muted); margin-bottom: var(--spacing-lg);">
-                    Interested in a specific piece or a custom request? Send us a message below.
-                </p>
+        <section class="shop-header section">
+            <div class="container">
+                <h1 class="serif-text" style="font-size: 3rem; text-align: center;">The Collection</h1>
+                <p style="text-align: center; color: var(--color-text-muted); margin-top: var(--spacing-sm);">Exclusive
+                    merchandise and home decor for the modern keeper.</p>
+            </div>
+        </section>
 
-                <form action="https://formspree.io/f/mjggezoe" method="POST" id="contact-form"
-                    style="background: var(--color-surface); padding: var(--spacing-md); border-radius: var(--border-radius); border: 1px solid rgba(255,255,255,0.1);">
-                    <div style="margin-bottom: var(--spacing-sm);">
-                        <label for="name"
-                            style="display: block; margin-bottom: 5px; color: var(--color-text-muted);">Name</label>
-                        <input type="text" id="name" name="name" required
-                            style="width: 100%; padding: 12px; background: #050505; border: 1px solid #333; color: white; border-radius: 4px;">
+        <section class="shop-grid section">
+            <div class="container"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md);">
+                <!-- Product Placeholder -->
+                <div class="product-card"
+                    style="background: var(--color-surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
+                    <div
+                        style="height: 300px; background: #222; display: flex; align-items: center; justify-content: center; color: var(--color-text-muted);">
+                        Product Image</div>
+                    <div style="padding: var(--spacing-sm);">
+                        <h3 class="serif-text">Den Signature Hoodie</h3>
+                        <p style="color: var(--color-teal); font-weight: 700; margin: 0.5rem 0;">$55.00</p>
+
+                        <div class="quantity-selector" style="margin-bottom: 1rem;">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" value="1" min="1" class="qty-input">
+                            <button class="qty-btn plus">+</button>
+                        </div>
+
+                        <button class="btn btn-primary add-to-cart-btn" data-id="hoodie-01"
+                            data-product="Den Signature Hoodie" data-price="55.00"
+                            style="width: 100%; text-align: center;">Add to Cart</button>
                     </div>
-                    <div style="margin-bottom: var(--spacing-sm);">
-                        <label for="email"
-                            style="display: block; margin-bottom: 5px; color: var(--color-text-muted);">Email</label>
-                        <input type="email" id="email" name="email" required
-                            style="width: 100%; padding: 12px; background: #050505; border: 1px solid #333; color: white; border-radius: 4px;">
+                </div>
+
+                <div class="product-card"
+                    style="background: var(--color-surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
+                    <div
+                        style="height: 300px; background: #222; display: flex; align-items: center; justify-content: center; color: var(--color-text-muted);">
+                        Product Image</div>
+                    <div style="padding: var(--spacing-sm);">
+                        <h3 class="serif-text">Artisanal Enclosure Decor</h3>
+                        <p style="color: var(--color-teal); font-weight: 700; margin: 0.5rem 0;">$85.00</p>
+
+                        <div class="quantity-selector" style="margin-bottom: 1rem;">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" value="1" min="1" class="qty-input">
+                            <button class="qty-btn plus">+</button>
+                        </div>
+
+                        <button class="btn btn-primary add-to-cart-btn" data-id="decor-01"
+                            data-product="Artisanal Enclosure Decor" data-price="85.00"
+                            style="width: 100%; text-align: center;">Add to Cart</button>
                     </div>
-                    <div style="margin-bottom: var(--spacing-sm);">
-                        <label for="subject"
-                            style="display: block; margin-bottom: 5px; color: var(--color-text-muted);">Subject</label>
-                        <select id="subject" name="subject"
-                            style="width: 100%; padding: 12px; background: #050505; border: 1px solid #333; color: white; border-radius: 4px;">
-                            <option value="Merchandise Inquiry">Merchandise Inquiry</option>
-                            <option value="Home Decor Inquiry">Home Decor Inquiry</option>
-                            <option value="Custom Order">Custom Order</option>
-                            <option value="General Support">General Support</option>
-                        </select>
-                    </div>
-                    <div style="margin-bottom: var(--spacing-md);">
-                        <label for="message"
-                            style="display: block; margin-bottom: 5px; color: var(--color-text-muted);">Message</label>
-                        <textarea id="message" name="message" rows="5" required
-                            style="width: 100%; padding: 12px; background: #050505; border: 1px solid #333; color: white; border-radius: 4px; resize: vertical;"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
-                    <div id="form-status" style="margin-top: var(--spacing-sm); text-align: center;"></div>
-                </form>
+                </div>
             </div>
         </section>
     </main>
@@ -164,7 +175,7 @@
 
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="Assets/js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

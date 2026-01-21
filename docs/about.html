@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop | Cold Blooded Hearts: The Den</title>
-    <link rel="stylesheet" href="Assets/css/main.css">
+    <title>About | Cold Blooded Hearts: The Den</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src="Assets/Fix.jpg" alt="Cold Blooded Hearts: The Den Logo">
+                <img src="Fix.jpg" alt="Cold Blooded Hearts: The Den Logo">
             </a>
             <nav>
                 <div class="menu-toggle" id="mobile-menu">
@@ -37,7 +37,7 @@
                     </svg>
                     <span class="cart-count" id="cart-count-val">0</span>
                 </div>
-                <a href="contact.html" class="btn btn-secondary">Inquire</a>
+                <a href="shop.html" class="btn btn-secondary">Explore</a>
             </div>
         </div>
     </header>
@@ -109,59 +109,19 @@
     </div>
 
     <main>
-        <section class="shop-header section">
-            <div class="container">
-                <h1 class="serif-text" style="font-size: 3rem; text-align: center;">The Collection</h1>
-                <p style="text-align: center; color: var(--color-text-muted); margin-top: var(--spacing-sm);">Exclusive
-                    merchandise and home decor for the modern keeper.</p>
-            </div>
-        </section>
-
-        <section class="shop-grid section">
-            <div class="container"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md);">
-                <!-- Product Placeholder -->
-                <div class="product-card"
-                    style="background: var(--color-surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
-                    <div
-                        style="height: 300px; background: #222; display: flex; align-items: center; justify-content: center; color: var(--color-text-muted);">
-                        Product Image</div>
-                    <div style="padding: var(--spacing-sm);">
-                        <h3 class="serif-text">Den Signature Hoodie</h3>
-                        <p style="color: var(--color-teal); font-weight: 700; margin: 0.5rem 0;">$55.00</p>
-
-                        <div class="quantity-selector" style="margin-bottom: 1rem;">
-                            <button class="qty-btn minus">-</button>
-                            <input type="number" value="1" min="1" class="qty-input">
-                            <button class="qty-btn plus">+</button>
-                        </div>
-
-                        <button class="btn btn-primary add-to-cart-btn" data-id="hoodie-01"
-                            data-product="Den Signature Hoodie" data-price="55.00"
-                            style="width: 100%; text-align: center;">Add to Cart</button>
-                    </div>
-                </div>
-
-                <div class="product-card"
-                    style="background: var(--color-surface); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(255,255,255,0.05);">
-                    <div
-                        style="height: 300px; background: #222; display: flex; align-items: center; justify-content: center; color: var(--color-text-muted);">
-                        Product Image</div>
-                    <div style="padding: var(--spacing-sm);">
-                        <h3 class="serif-text">Artisanal Enclosure Decor</h3>
-                        <p style="color: var(--color-teal); font-weight: 700; margin: 0.5rem 0;">$85.00</p>
-
-                        <div class="quantity-selector" style="margin-bottom: 1rem;">
-                            <button class="qty-btn minus">-</button>
-                            <input type="number" value="1" min="1" class="qty-input">
-                            <button class="qty-btn plus">+</button>
-                        </div>
-
-                        <button class="btn btn-primary add-to-cart-btn" data-id="decor-01"
-                            data-product="Artisanal Enclosure Decor" data-price="85.00"
-                            style="width: 100%; text-align: center;">Add to Cart</button>
-                    </div>
-                </div>
+        <section class="about-hero section">
+            <div class="container" style="max-width: 800px; text-align: center;">
+                <h1 class="serif-text" style="font-size: 3.5rem; margin-bottom: var(--spacing-md);">The Story of <span
+                        style="color: var(--color-teal);">The Den</span></h1>
+                <p style="font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: var(--spacing-md);">
+                    Born from a passion for the exotic and a dedication to craft, The Den is the lifestyle extension of
+                    Cold Blooded Hearts. We believe that caring for reptiles is an art form, and the environment we
+                    create for them—and ourselves—should reflect that.
+                </p>
+                <p style="font-size: 1.1rem; color: var(--color-text-muted);">
+                    From artisanal home decor to premium apparel, every item in The Den is curated to resonate with the
+                    heartbeat of the modern keeper.
+                </p>
             </div>
         </section>
     </main>
@@ -175,7 +135,7 @@
 
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="Assets/js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
