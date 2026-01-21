@@ -301,12 +301,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.ok) {
                     // 2. Send Branded Receipt to Customer (EmailJS)
-                    // We attempt to send the receipt but don't let it block the "Success" UI
-                    // as EmailJS may hang on local file:// protocols due to origin security.
                     try {
                         await sendCustomerReceipt(email, activeMethod.toUpperCase(), orderDetails, total);
                     } catch (e) {
-                        console.warn('Confirmation receipt could not be sent automatically. This is expected on local testing (file://). It will work on live HTTPS deployment.', e);
+                        console.warn('Customer receipt could not be sent automatically. If this is a 400 error on your live site, please verify your EmailJS Template/Service IDs.', e);
                     }
 
                     showSuccessState(activeMethod, email);
@@ -343,12 +341,15 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Attempting to send EmailJS receipt...', templateParams);
 
         try {
-            const result = await emailjs.send('service_jshwbap', 'template_vjs768v', templateParams);
+            // Using the 4-parameter version of send for maximum reliability in SDK v4
+            const result = await emailjs.send('service_jshwbap', 'template_vjs768v', templateParams, 'tjFiVTG59iT5vLlQm');
             console.log('EmailJS SUCCESS!', result.status, result.text);
             return result;
         } catch (error) {
-            console.error('EmailJS FAILED...', error);
-            throw error; // Propagate error to avoid fake success
+            console.error('EmailJS FAILED to send. Error details:', error);
+            // If the error has a response text or status, EmailJS usually provides it here
+            if (error.text) console.error('EmailJS Error Text:', error.text);
+            throw error; // Propagate error for the main flow to handle
         }
     }
 
